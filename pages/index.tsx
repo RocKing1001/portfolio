@@ -1,10 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Router from 'next/router';
+import MoreInfo from '../components/MoreInfo';
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Kunal Dandekar</title>
         <meta
@@ -14,9 +16,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.neonText}>Hi, welcome to my portfolio</h1>
+      <main className="min-h-screen p-16 flex flex-1 items-center justify-center flex-col bg-bgdark">
+        <h1 className={styles.neonText}>KUNAL DANDEKAR </h1>
+        <button onClick={() => Router.push("#moreinfo")} className="text-txtblue">READ MORE</button>
       </main>
+      
+      <MoreInfo />
     </div>
   );
 }
