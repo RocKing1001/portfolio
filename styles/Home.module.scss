@@ -1,0 +1,117 @@
+$bg: hsl(216, 13%, 3%);
+$bg-focus: hsl(216, 13%, 13%);
+$primary: hsl(0, 0%, 100%);
+$primary-light: hsl(0, 0%, 0%);
+$primary-contrast: hsl(216, 13%, 25%);
+$accent: hsl(0, 0%, 0%);
+
+.container {
+  background-color: $bg;
+  color: $primary;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  cursor: default;
+  display: grid;
+  grid-template-areas: "a b c";
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1.7rem 1rem;
+  font-family: "Fira Code";
+  font-size: 1.2rem;
+  border-top: $bg-focus solid 2px;
+  background-color: hsl(216, 13%, 5%);
+
+
+  .myname {
+    place-self: start;
+    grid-area: a;
+    font-family: 'Karmatic Arcade';
+  }
+  .coffee {
+    place-self: center;
+    grid-area: b;
+    .human {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+  .socials {
+    place-self: end;
+    grid-area: c;
+    
+    .gh {
+      font-family: "nf";
+      color: $primary-contrast;
+      user-select: none;
+    }
+  }
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  font-family: "Arcadepix";
+
+  a {
+    color: #0070f3;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: $bg-focus;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  font-family: "Fira Code";
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
