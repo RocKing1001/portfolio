@@ -40,7 +40,7 @@ const Home: NextPage = () => {
           <span style={{ color: "#a6b2bf" }}>.</span>
           <span style={{ color: "#e06c75" }}>poweredBy</span>{" "}
           <span style={{ color: "#56b6c2" }}>!=</span>{" "}
-          <span style={{ color: "#98c379" }}>&quot☕&quot</span>
+          <span style={{ color: "#98c379" }}>{"\"☕\""}</span>
         </span>
         <span className={styles.socials}>
           <span className={styles.gh}>{" github"}</span>
