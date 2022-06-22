@@ -1,16 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
-@font-face {
-  font-family: "Karmatic Arcade";
-  src: url('../public/fonts/ka1.woff');
-}
-@font-face {
-  font-family: "Arcadepix";
-  src: url('../public/fonts/arcadepi.woff');
-}
-@font-face {
-  font-family: "nf";
-  src: url('../public/fonts/Fira-Code-Regular-Nerd-Font-Complete.woff');
-}
 
 html,
 body {

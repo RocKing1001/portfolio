@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Karmatic Arcade";
+  src: url('../public/fonts/ka1.woff');
+}
+@font-face {
+  font-family: "Arcadepix";
+  src: url('../public/fonts/arcadepi.woff');
+}
+@font-face {
+  font-family: "nf";
+  src: url('../public/fonts/Fira-Code-Regular-Nerd-Font-Complete.woff');
+}
+
 $bg: hsl(216, 13%, 3%);
 $bg-focus: hsl(216, 13%, 13%);
 $primary: hsl(0, 0%, 100%);
