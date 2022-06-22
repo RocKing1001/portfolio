@@ -1,3 +1,4 @@
+import styles from "../../styles/Three.module.scss";
 import * as THREE from "three";
 import { useEffect, useRef } from "react";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -5,6 +6,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 export default function Three() {
   // reference for the canvas element
   const canvas = useRef<HTMLCanvasElement>(null);
+  const reset = useRef<HTMLButtonElement>(null);
 
   // all the threejs code goes here
   useEffect(() => {
@@ -44,6 +46,15 @@ export default function Three() {
     // controls
     const controls = new OrbitControls(camera, renderer.domElement);
 
+    const resetOrbitControl = () => {
+      controls.reset();
+    };
+
+    reset.current!.addEventListener(
+      "mousedown",
+      resetOrbitControl
+    );
+
     scene.add(lightHelper, gridHelper);
     // the game loop
     const animate = () => {
@@ -58,8 +69,23 @@ export default function Three() {
       renderer.render(scene, camera);
     };
     animate();
+    
+
+    // cleanup
+    return () => {
+      reset.current!.removeEventListener('mousedown', resetOrbitControl)
+    }
   }, []);
 
   // canvas to render on
-  return <canvas ref={canvas}></canvas>;
+  return (
+    <>
+      <canvas className={styles.canvas} ref={canvas} />
+      <main className={styles.main}>
+        <button ref={reset} className={styles.reset}>
+          reset
+        </button>
+      </main>
+    </>
+  );
 }
