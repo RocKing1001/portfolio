@@ -13,12 +13,14 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "sass": "^1.52.3",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "three": "^0.141.0"
   },
   "devDependencies": {
     "@types/node": "17.0.42",
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.5",
+    "@types/three": "^0.141.0",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
     "typescript": "4.7.3"
